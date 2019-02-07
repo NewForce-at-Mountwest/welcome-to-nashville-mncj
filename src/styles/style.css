@@ -1,0 +1,51 @@
+h1{
+    text-align:center;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 3rem;
+    min-height: 100%;
+    /* font-family: "Helvetica Neue", Arial, sans-serif; */
+  }
+
+section {
+    display:flex;
+    justify-content:center;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+
+button {
+    width:12rem;
+    margin-left:1rem;
+}
+
+input {
+    width:18rem;
+    margin-right:1rem;
+}
+
+.returnedEventDiv {
+    margin-left:3rem;
+    margin-right:3rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    border: 1px solid red;
+}
+
+#searchResults {
+    margin-left:1rem;
+    border: 2px solid blue;
+}
+
+#pageFooter{
+    text-align:center;
+    font-size:0.8rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}

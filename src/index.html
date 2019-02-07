@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport content=width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport content=width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Nashville Happenings</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
 
-      <!-- Input boxes and search buttons -->
+<body>
+
+  <h1 id="siteTitle">What's Good, Nashville?</h1>
+  <!-- Input boxes and search buttons -->
+  <div id="searchDiv">
+    <section id="parkSearchDiv">
     <input type="text" name="parkInput" id="parkSearchBar" placeholder="What type of park?"></input>
     <button id="parkSearchBtn">Search For Parks</button>
-
+    </section>
+    <section id="restaurantSearchDiv">
     <input type="text" name="restaurantInput" id="restaurantSearchBar" placeholder="What type of restaurant?"></input>
     <button id="restaurantSearchBtn">Search For Restaurants</button>
-
+    </section>
+    <section id="meetupSearchDiv">
     <input type="text" name="meetupInput" id="meetupSearchBar" placeholder="What type of meetup?"></input>
     <button id="meetupSearchBtn">Search For Meetups</button>
-
+    </section>
+    <section id="concertSearchDiv">
     <input type="text" name="concertInput" id="concertSearchBar" placeholder="What type of concert?"></input>
     <button id="concertSearchBtn">Search For Concerts</button>
+    </section>
+  </div>
 
-    <div id=searchResults>
-      <!-- Results receipient div -->
-    </div>
+  <!-- Results receipient div -->
+  <div id="searchResults">
+    
+  </div>
 
-    <div>
-      <!-- Build itinerary here div -->
-    </div>
+<!-- Build itinerary here div -->
+  <div id="itineraryDiv">
+    
+  </div>
 
-    <script src="scripts/main.js"></script>
-  </body>
+<footer id="pageFooter">A MCNJ thing for NewForce - All rights reserved, patent pending, copyright, don't steal our sheit 2019</footer>
+  <script src="scripts/meetupAPIManager.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
 </html>

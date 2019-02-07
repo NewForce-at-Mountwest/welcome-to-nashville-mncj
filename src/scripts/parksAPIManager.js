@@ -1,5 +1,4 @@
-
-// target the park search button, add a click event and a function editing the search values to  replace capitalization and empty space with usable key values.
+// target the park search button, add a click event 
 
 document.querySelector("#parkSearchBtn").addEventListener("click", () => {
     
@@ -10,26 +9,31 @@ document.querySelector("#parkSearchBtn").addEventListener("click", () => {
     fetch(`https://data.nashville.gov/resource/xbru-cfzi.json?${parkSearch}=Yes`, {
         "$$app_token": "UV5P5RY4tBY3gDjgiEoopKmGb"
     })
-        //  parse the data from the api and console log it
+
+//  parse the data from the api and console log it
+
         .then(parks => parks.json())
         .then(parsedParks => {
+        
+// return the first 4 results, grab park name and address and console log it
 
         for (i=0; i<4; i++){
-        let parkNameParam = parsedParks[i].park_name
+        let parkName = parsedParks[i].park_name
         let parkAddress = parsedParks[i].mapped_location_address
-        console.log(parkNameParam)
+        
+// target div container and throw info into index
+
+        document.querySelector("#searchResults").innerHTML += `
+        <div>
+        <h4>${parkName}</h4><p>${parkAddress}</p>
+        </div>
+        `
+
+        // document.querySelector("#searchResults").innerHTML = parkHTML
+        console.log(parkName)
         console.log(parkAddress)
         }})
     })
-
-//    https://data.nashville.gov/resource/xbru-cfzi.json?park_name=
-//    https://data.nashville.gov/resource/xbru-cfzi.json?mapped_location_address=2301 Metro Center Blvd
-
-// for (i=0; i<4; i++){
-//         let parkNameParam = parsedParks.parks[i].parkNameParam.park_name;
-//         console.log(parkNameParam)
-
-
 
 // // get all the park information as json
 // const searchParks = parkNameParam => {

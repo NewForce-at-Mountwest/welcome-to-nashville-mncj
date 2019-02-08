@@ -35,10 +35,24 @@ input {
     border: 1px solid red;
 }
 
+div[id^=returnedEventDiv] {
+    display:block;
+    text-align:center;
+}
+
+div[id^=returnedEventDiv] p {
+    font-weight: bold;
+}
+
 #searchResults {
     margin-left:1rem;
     border: 2px solid blue;
 }
+
+/* #searchResults > button{
+    width:12rem;
+    margin-right:2rem;
+    } */
 
 #pageFooter{
     text-align:center;
@@ -51,9 +65,17 @@ input {
 }
 
 #itineraryDiv {
+
     border: 2px solid grey;
     margin-top: 2rem;
     margin-bottom: 2rem;
     margin-left: 8rem;
     margin-right: 8rem;
 }
+
+#meetupItinerary section{
+    text-align:center;
+    display:inline;
+    font-size:1.25em;
+}
+

@@ -27,5 +27,5 @@ document.querySelector("#meetupSearchBtn").addEventListener("click", () => {
         let meetupText2 = `Meetup: ${meetupText1}`
         // let meetupName = document.querySelector(`#event-${resultBtns[1]}`)
         let removeEvent = document.getElementById(`returnedEventDiv-${resultBtns[1]}`).remove()
-            document.querySelector("#meetupItinerary").innerText = meetupText2
-        })
+        document.querySelector("#meetupItinerary").innerText = meetupText2
+    })

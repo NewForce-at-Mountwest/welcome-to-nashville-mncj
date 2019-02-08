@@ -9,20 +9,32 @@ document.querySelector("#meetupSearchBtn").addEventListener("click", () => {
         .then(events => events.json())
         .then(parsedEvents => {
             // console.log(parsedEvents)
-            let eventsHTMLHeader = `<h1>Here's your suggested ${meetupParam} events...</h1>`
-            document.querySelector("#searchResults").innerHTML += eventsHTMLHeader
-            // let eventsHTMLString = ""
+            document.querySelector("#searchResults").innerHTML = `<h1>Here's your suggested ${meetupParam} events...</h1>`
+            let eventsHTMLString = ""
             for (i = 0; i < 4; i++) {
-                document.querySelector("#searchResults").innerHTML += `<div id="returnedEventDiv-${[i]}"><h3 id="event-${[i]}">${parsedEvents.events[i].name.text}</h3><h4>Scheduled Event Date & Time - ${parsedEvents.events[i].start.local}</h4><p><a href=${parsedEvents.events[i].url} target="_blank">Event Website</a></p><button id="eventBtn-${[i]}">Save to Itinerary</button></div>`
-                // console.table(parsedEvents.events[i].name)
+                eventsHTMLString += `<div id="returnedEventDiv-${[i]}"><h3 id="event-${[i]}">${parsedEvents.events[i].name.text}</h3><a href=${parsedEvents.events[i].url} class="url"  target="_blank">${parsedEvents.events[i].url}</a><button class="button" id="eventBtn-${[i]}">Save to Itinerary</button></div>`
+                // To add date and time to concatenated HTML String
+                // <h4>Scheduled Event Date & Time - ${parsedEvents.events[i].start.local}</h4>
             }
-            // document.querySelector("#searchResults").innerHTML += eventsHTMLString
+        document.querySelector("#searchResults").innerHTML += eventsHTMLString
         })
 })
 
-
 document.querySelector("#searchResults").addEventListener("click", () => {
-    const resultDiv = event.target.id.split("-");
-        console.log(resultDiv)
-        // wholeCard.remove()
+    const resultBtns = event.target.id.split("-");
+    console.log(resultBtns[1])
+    let text = document.createTextNode("Meetup - ")
+    console.log(typeof text)
+    console.log(text)
+    let meetupName = document.querySelector(`#event-${resultBtns[1]}`)
+    console.log(typeof meetupName)
+    console.log(meetupName)
+    let removeEvent = document.getElementById(`returnedEventDiv-${resultBtns[1]}`).remove()
+    // let meetupObject = Object.assign({}, text, meetupName)
+    // console.log(meetupObject)
+        document.querySelector("#itineraryDiv").appendChild(text)
+        document.querySelector("#itineraryDiv").appendChild(meetupName)
     })
+
+
+

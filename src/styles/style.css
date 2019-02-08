@@ -49,3 +49,11 @@ input {
     left: 0;
     padding: 1rem;
 }
+
+#itineraryDiv {
+    border: 2px solid grey;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+}

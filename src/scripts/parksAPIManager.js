@@ -41,9 +41,8 @@ document.querySelector("#searchResults").addEventListener("click", () => {
     const resultsContainer = event.target.parentNode;
     if (event.target.id === "saveBtn") {
         console.log("You are getting somewhere!")
-        const itenContainer = resultsContainer.cloneNode(true);
-        document.querySelector("#chosenPark").appendChild(itenContainer);
-        
+        const itinContainer = resultsContainer.cloneNode(true)
+        document.querySelector("#chosenPark").appendChild(itinContainer);    
     }
 })
 

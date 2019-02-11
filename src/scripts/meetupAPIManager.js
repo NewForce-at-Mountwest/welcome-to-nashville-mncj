@@ -34,6 +34,7 @@ document.querySelector("#searchResults").addEventListener("click", () => {
     // console.log(meetupObject)
         document.querySelector("#itineraryDiv").appendChild(text)
         document.querySelector("#itineraryDiv").appendChild(meetupName)
+        
     })
 
 

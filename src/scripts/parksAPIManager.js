@@ -49,21 +49,21 @@ document.querySelector("#searchResults").addEventListener("click", () => {
    
 }
 )
-// document.querySelector("#searchResults").addEventListener("click", () => {
-//     const resultBtns = event.target.id.split("-");
-//     console.log(resultBtns[1])
-//     let text = document.createTextNode("Meetup - ")
-//     console.log(typeof text)
-//     console.log(text)
-//     let meetupName = document.querySelector(`#event-${resultBtns[1]}`)
-//     console.log(typeof meetupName)
-//     console.log(meetupName)
-//     let removeEvent = document.getElementById(`returnedEventDiv-${resultBtns[1]}`).remove()
-//     // let meetupObject = Object.assign({}, text, meetupName)
-//     // console.log(meetupObject)
-//         document.querySelector("#itineraryDiv").appendChild(text)
-//         document.querySelector("#itineraryDiv").appendChild(meetupName)
+document.querySelector("#searchResults").addEventListener("click", () => {
+    const resultBtns = event.target.id.split("-");
+    console.log(resultBtns[1])
+    let text = document.createTextNode("Park - ")
+    console.log(typeof text)
+    console.log(text)
+    let meetupName = document.querySelector(`#event-${resultBtns[1]}`)
+    console.log(typeof meetupName)
+    console.log(meetupName)
+    let removeEvent = document.getElementById(`returnedEventDiv-${resultBtns[1]}`).remove()
+    // let meetupObject = Object.assign({}, text, meetupName)
+    // console.log(meetupObject)
+        document.querySelector("#itineraryDiv").appendChild(text)
+        document.querySelector("#itineraryDiv").appendChild(meetupName)
         
-//     })
+    })
 
 
